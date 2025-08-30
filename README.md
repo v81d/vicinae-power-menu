@@ -51,8 +51,6 @@ Before installing **Vicinae Power Menu**, make sure your system meets the follow
 git clone https://github.com/v81d/vicinae-power-menu.git
 cd vicinae-power-menu
 ```
-```
-```
 
 2. Copy the helper script to the dedicated directory:
 
