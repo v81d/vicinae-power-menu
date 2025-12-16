@@ -59,11 +59,3 @@ exec-once = ~/.local/share/vicinae-power-menu/helper.sh  # For Hyprland
 ```
 
 You can also create a dedicated `~/.config/autostart` service that calls the script on startup.
-
-## License
-
-This project is licensed under the **MIT License**.
-
-You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software, provided that the original copyright notice and this permission notice are included in all copies or substantial portions of the software.
-
-For the full license text, see https://mit-license.org.
