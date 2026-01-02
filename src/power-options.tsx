@@ -2,7 +2,6 @@ import { promises } from "fs";
 import os from "os";
 import { Action, ActionPanel, closeMainWindow, Icon, List } from "@vicinae/api";
 
-// Type definition for commands
 type Command = {
   name: string;
   description: string;
@@ -47,18 +46,16 @@ export default function PowerOptions() {
   const runCommand = async (cmd: Command) => {
     closeMainWindow();
 
-    const homeDir = os.homedir();  // Get user home directory (/home/...)
-    const SOCKET = `${homeDir}/.local/share/vicinae-power-menu/helper.sock`;  // Assuming the FIFO is stored there
-
-    // Write to FIFO the desired command
+    const homeDir = os.homedir(); // get user home directory (/home/...)
+    const SOCKET = `${homeDir}/.local/share/vicinae-power-menu/helper.sock`; // assuming the FIFO is stored here
+    
     try {
       await promises.writeFile(SOCKET, `${cmd.command}\n`);
     } catch (err) {
-      console.error(`${cmd.name} failed:`, err);  // If write failed
+      console.error(`${cmd.name} failed:`, err);
     }
   };
 
-  // List display
   return (
     <List searchBarPlaceholder="Select a power option...">
       {commands.map((cmd) => (
