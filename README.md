@@ -1,7 +1,5 @@
 # Vicinae Power Menu
 
-![License](https://img.shields.io/badge/license-MIT-green)
-
 Vicinae Power Menu is a dedicated power menu for [**Vicinae**](https://github.com/vicinaehq/vicinae), designed to integrate seamlessly with your environment. It allows you to control your session easily within the launcher.
 
 ![Screenshot](screenshot.png)
